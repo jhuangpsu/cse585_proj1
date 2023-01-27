@@ -40,6 +40,9 @@ for i = 1 + pad_row_m : Mm + pad_row_m
     end
 end
 
+imtool(output_hit);
+imtool(output_miss);
+
 output = andop(output_hit, output_miss);
 
 end

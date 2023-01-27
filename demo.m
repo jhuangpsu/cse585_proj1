@@ -27,7 +27,7 @@ end
 imtool(fg_binary);
 
 fg_reverse = uint8(reverse(fg_binary));
-%imtool(fg_reverse);
+imtool(fg_reverse);
 
 
 % build the structuring elements and the restore element
@@ -36,10 +36,10 @@ se1 = strel("disk",r1,6);
 se_1 = lo2uint(se1);
 %se_1 = padding(se_1,24);
 
-r2 = 30; % should be the second largest r
+r2 = 31; % should be the second largest r
 se2 = strel("disk",r2,8);
 se_2 = lo2uint(se2);
-se_2 = uint8(reverse(padding(se_2,10,10,true)));
+se_2 = uint8(reverse(padding(se_2,5,5,true))); % not good to set padding size too large
 
 se3 = strel("disk",3,0);
 se_3 = lo2uint(se3);
