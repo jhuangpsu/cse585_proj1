@@ -1,6 +1,5 @@
 function [output] = erosion(img, se)
 [M,N] = size(img);
-sum_se = stat(se,0);
 [r,c] = size(se);
 pad_row_r = pad_num(M,M,r);
 pad_col_r = pad_num(N,N,c);
