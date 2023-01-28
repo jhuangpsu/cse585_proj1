@@ -10,8 +10,8 @@ imtool(fg);
 
 
 % Filter the image using the 3x3 mean filter
-fg_filtered = mean3x3(fg, zero(M, N), M, N);
-%fg_filtered = fg;
+
+fg_filtered = fg;
 imtool(fg_filtered);
 
 
