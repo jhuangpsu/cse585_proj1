@@ -4,13 +4,15 @@ clear;
 f=imread('RandomDisks-P10.jpg');
 imtool(f);
 fg = rgb2gray(f);
-
-[M, N] = size(fg);
 imtool(fg);
+fg_threshed = img2b(fg);
+imtool(fg_threshed);
+[M, N] = size(fg_threshed);
+
 
 
 % Filter the image using the 3x3 mean filter
-fg_filtered = mean3x3(fg, zero(M, N), M, N);
+fg_filtered = mean3x3(fg_threshed, zero(M, N), M, N);
 %fg_filtered = fg;
 imtool(fg_filtered);
 
