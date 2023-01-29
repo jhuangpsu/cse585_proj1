@@ -9,11 +9,18 @@ fg_threshed = img2b(fg);
 imtool(fg_threshed);
 [M, N] = size(fg_threshed);
 
+se0 = strel("disk",1);
+se_0 = lo2uint(se0);
+imtool(se_0);
+clsoing1 = dilation(fg_threshed, se_0);
+clsoing2 = erosion(clsoing1, se_0);
+imtool(clsoing2);
+opening1 = erosion(clsoing2, se_0);
+opening2 = dilation(opening1, se_0);
+imtool(opening2);
 
-
-% Filter the image using the 3x3 mean filter
-fg_filtered = mean3x3(fg_threshed, zero(M, N), M, N);
-%fg_filtered = fg;
+fg_filtered = opening2;
+%fg_filtered = fg_threshed;
 imtool(fg_filtered);
 
 

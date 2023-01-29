@@ -9,9 +9,6 @@ fg_threshed = img2b(fg);
 imtool(fg_threshed);
 [M, N] = size(fg_threshed);
 
-
-
-% Filter the image using the 3x3 mean filter
 fg_filtered = fg_threshed;
 imtool(fg_filtered);
 
