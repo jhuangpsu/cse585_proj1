@@ -1,3 +1,28 @@
+% ==============================================================
+% Module: demo.m
+%
+% Usage: Main MATLAB code file for filtering an image.
+%
+% Purpose:
+%   Implement Hit-or-Miss Transform to detect the smallest 
+% and largest disks in the given image.
+%
+% Input Variables:
+%   f “RandomDisks-P10.jpg”
+%
+% Returned Results:
+%   output_final The smallest and largest disks in the given image
+%
+% Processing Flow:
+%   (a) Threshold the input image
+%   (b) Filter the image
+%   (c) Apply the hit-or-miss transform
+%
+%
+% Author: Junzhe Huang, Yiyang Mei, Tianhui Li
+% Date: 01/29/2023
+% ===============================================================*
+
 clear;
 
 % Read the image and convert it to a grascale image

@@ -1,3 +1,28 @@
+% ==============================================================
+% Module: restore.m
+%
+% Usage: Helper function.
+%
+% Purpose:
+%   Restore the image with hit points and proper restore element
+%
+% Input Variables:
+%   fg_binary Original binary img
+%   output_pos Hit points needed for restore
+%   se_3 Restore element
+%
+% Returned Results:
+%   output The image after restore
+%
+% Processing Flow:
+%   1. Dilation upon the hit points image
+%   2. Perform AND operation upon the previous output and the binary image
+%   3. Stop when updated image became the same as the previous one
+%
+% Author: Junzhe Huang, Yiyang Mei, Tianhui Li
+% Date: 01/29/2023
+% ===============================================================*
+
 function [output] = restore(fg_binary, output_pos, se_3)
 [M,N] = size(output_pos);
 sum_se3 = stat(se_3,0);

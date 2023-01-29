@@ -1,3 +1,32 @@
+% ==============================================================
+% Module: hitnmiss.m
+%
+% Usage: Helper function.
+%
+% Purpose:
+%   Perform a hitnmiss opteration on the given images with corresbonding 
+% structing elements
+%
+% Input Variables:
+%   input_h Hit image
+%   input_m Miss image
+%   se_1 Structing element for Hit image
+%   se_2 Structing element for Miss image
+%
+% Returned Results:
+%   output The image after hitnmiss transformation
+%
+% Processing Flow:
+%   (a) Pad the images
+%   (b) Apply erosion with corresponding structing element
+%   (c) Find the intersection
+%   (d) Store the result
+%
+% Author: Junzhe Huang, Yiyang Mei, Tianhui Li
+% Date: 01/29/2023
+% ===============================================================*
+
+
 function [output] = hitnmiss(input_h, input_m, se_1, se_2)
 [Mh,Nh] = size(input_h);
 [Mm,Nm] = size(input_m);

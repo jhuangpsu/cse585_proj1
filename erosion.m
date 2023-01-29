@@ -1,3 +1,28 @@
+% ==============================================================
+% Module: erosion.m
+%
+% Usage: Helper function.
+%
+% Purpose:
+%   Perform a erosion opteration on a given image with structing 
+% element
+%
+% Input Variables:
+%   img Target image
+%   se Structing element
+%
+% Returned Results:
+%   output The image after erosion
+%
+% Processing Flow:
+%   (a) Pad the image
+%   (b) Apply erosion with structing element se
+%   (c) store result
+%
+% Author: Junzhe Huang, Yiyang Mei, Tianhui Li
+% Date: 01/29/2023
+% ===============================================================*
+
 function [output] = erosion(img, se)
 [M,N] = size(img);
 [r,c] = size(se);
